@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Populate the Ocean</title>
+        <style>
+            .fish{
+                width:60px;
+                height:90px;
+                overflow:hidden;
+                color:white;
+                font-size:13px;
+                padding:10px;
+                background: url(images/goldfish.png) top left no-repeat;
+                background-size:100%;
+            }
+            .octopus{
+                width:60px;
+                height:90px;
+                overflow:hidden;
+                color:white;
+                font-size:13px;
+                padding:10px;
+                background: url(images/octopus.png) top left no-repeat;
+                background-size:100%;
+            }
+            .scuba{
+                width:60px;
+                height:90px;
+                overflow:hidden;
+                color:white;
+                font-size:13px;
+                padding:10px;
+                background: url(images/scuba-diver.png) top left no-repeat;
+                background-size:100%;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <p> 
+    <img id="diver-pic" src="http://www.clker.com/cliparts/L/5/Q/V/Y/B/cartoon-scuba-diver-hi.png" width="150" alt="Scuba diver"> 
+    <img id="octo-pic" src="https://s-media-cache-ak0.pinimg.com/236x/d7/63/9f/d7639f98e0c0d9327ba3761e8fc5f19e.jpg" width="100" alt="Octopus">
+    <img id="fish-pic" src="http://freepngimages.com/wp-content/uploads/2015/06/goldfish1.png" width="100" alt="Goldfish"> 
+    </p>
+
+    <img id="ocean-pic" src="http://theartmad.com/wp-content/uploads/2015/09/Underwater-Ocean-Background-3.jpg" width="1300" alt="Blue ocean">
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script>
+    $("#ocean-pic").on("click", function(event) {
+        var $pic = $("<div></div>");
+        $pic.addClass("fish");
+        $pic.css("position", "absolute");
+        $pic.css("top", event.pageY + "px");
+        $pic.css("left", event.pageX + "px");
+        $pic.appendTo("body");
+    });
+        
+    </script>
+
+    </body>
+</html>
